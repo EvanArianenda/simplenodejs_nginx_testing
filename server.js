@@ -1,6 +1,9 @@
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(4000);
-console.log('Server running at http://localhost:4000/');
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+    res.end("Successfully started a server");
+});
+
+server.listen(4000, "localhost", () => {
+  console.log("Listening for request");
+});
